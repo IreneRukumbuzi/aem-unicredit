@@ -1,0 +1,23 @@
+<sly class="navbar__second-level" data-sly-repeat="${currentPage.listChildren}">
+  <div
+    data-sly-test.child="${item.name}"
+    class="second-level__items ${name}"
+    data-nav-2="${child}"
+  >
+    <div class="container">
+      <a
+        data-sly-test.child="${item.title}"
+        class="second-level__item--title text--paragraph-title"
+        href="#"
+      >
+        ${child}
+      </a>
+      <a
+        class="second-level__item text--body"
+        data-sly-list.subpage="${item.listChildren}"
+        href="#"
+        >${subpage.title}</a
+      >
+    </div>
+  </div>
+</sly>

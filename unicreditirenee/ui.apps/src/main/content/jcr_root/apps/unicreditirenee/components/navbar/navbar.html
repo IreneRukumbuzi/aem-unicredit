@@ -1,0 +1,11 @@
+<sly data-sly-use.header="it.codeland.unicreditirenee.core.models.Header">
+  <div data-sly-test="${!header.linkDetailsWithMap}">Add Links</div>
+
+  <div class="navbar__links" data-sly-list.item="${header.linkDetailsWithMap}">
+    <a class="navbar__link" href="${item.link}.html">
+      <div class="${item.icon}"></div>
+
+      <p class="text--label">${item.linklabel}</p>
+    </a>
+  </div>
+</sly>

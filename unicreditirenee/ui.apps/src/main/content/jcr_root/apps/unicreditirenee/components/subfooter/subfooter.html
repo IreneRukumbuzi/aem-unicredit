@@ -1,0 +1,7 @@
+<sly data-sly-use.footer="it.codeland.unicreditirenee.core.models.Footer">
+  <div data-sly-test="${!footer.footerLinks}">Add Footer Links</div>
+
+  <div class="footer__mainLink" data-sly-list.item="${footer.footerLinks}">
+    <a href="${item.link}" class="footer__link">${item.label}</a>
+  </div>
+</sly>

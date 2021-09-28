@@ -1,0 +1,72 @@
+<sly data-sly-use.slider="it.codeland.unicreditirenee.core.models.Gallery">
+  <div class="photogallery container-fixed">
+    <!-- Swiper Top-->
+
+    <div class="swiper-container gallery-top">
+      <div
+        class="swiper-wrapper"
+        data-modal
+        data-sly-list.item="${slider.slideWithDetails}"
+      >
+        <div
+          class="swiper-slide"
+          data-bg="${item.image}"
+          data-bg-mobile="${item.image}"
+        >
+          <span class="swiper-text">${item.description @ context="html"}</span>
+        </div>
+      </div>
+      <!-- Expand -->
+      <div class="photogallery__expand">
+        <div class="icon icon-expand"></div>
+      </div>
+      <!-- Arrows -->
+      <div data-arrows class="photogallery__arrows">
+        <div data-prev-small white class="icon-down prev"></div>
+        <div data-number white>
+          <span class="current"></span> / <span class="total"></span>
+        </div>
+        <div data-next-small white class="icon-down next"></div>
+      </div>
+      <!-- Paginator -->
+      <div
+        data-pagination
+        data-hero-pagination
+        class="photogallery__pagination"
+      ></div>
+    </div>
+    <!-- Text Middle -->
+    <div class="swiper-text--middle container--picture">
+      <p class="text-middle text--body"></p>
+    </div>
+    <!-- Swiper Bottom -->
+    <div class="swiper-container gallery-thumbs container--picture">
+      <div
+        class="swiper-wrapper"
+        data-sly-list.item="${slider.slideWithDetails}"
+      >
+        <div
+          class="swiper-slide"
+          data-bg="${item.smallimage}"
+          data-bg-mobile="${item.smallimage}"
+        ></div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="photogallery__modal ucg-icons__newPackage">
+      <div class="icon-box container">
+        <div class="icon icon-close modal__close"></div>
+      </div>
+      <div class="picture container" data-bg data-bg-mobile></div>
+      <div class="arrow-box container">
+        <div data-arrows class="photogallery__arrows">
+          <div data-prev-small white class="icon-down prev"></div>
+          <div data-number white>
+            <span class="current">1</span> / <span class="total">3</span>
+          </div>
+          <div data-next-small white class="icon-down next"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</sly>

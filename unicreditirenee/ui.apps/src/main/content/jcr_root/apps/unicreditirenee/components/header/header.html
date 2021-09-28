@@ -1,0 +1,102 @@
+<header class="header ucg-icons__newPackage">
+  <nav class="navbar container-fixed">
+    <div class="navbar__zero-level">
+      <div>
+        <a href="#">
+          <div class="navbar__logo"
+            data-sly-resource="${'myimage' @ resourceType='unicreditirenee/components/myimage'}"
+          ></div>
+        </a>
+      </div>
+      <div
+        data-sly-resource="${'navbar' @ resourceType='unicreditirenee/components/navbar'}"
+      ></div>
+
+      <a class="navbar__entry-point" href="#">
+        <div class="icon icon-online-Banking_A"></div>
+        <div class="entry-point__text text--label">ONLINE BANKING</div>
+      </a>
+    </div>
+    <div class="navbar__hamburger">
+      <div class="navbar__first-level">
+        <div class="navbar__back text--label">
+          <div class="icon icon-back"></div>
+          <span>BACK</span>
+        </div>
+        <div class="first-level__items">
+          <div
+            data-sly-repeat="${CurrentPage.listChildren}"
+            data-nav-1="${item.name}"
+            class="first-level__item ${item.name}"
+            href="#"
+          >
+            <span class="item__text text--label">${item.title}</span>
+            <span class="icon icon-forth"></span>
+          </div>
+        </div>
+
+        <div class="navbar__languages">
+          <div class="languages__selector">
+            <p class="selector__text text--label">ITA</p>
+            <span class="icon icon-down"></span>
+            <div class="selector__items">
+              <a
+                class="selector__item selector__item--active text--label"
+                data-lang="ITA"
+                data-lang-dk="ITALIANO"
+                data-lang-m="IT"
+                href="#"
+                >ITALIANO</a
+              >
+              <a
+                class="selector__item text--label"
+                data-lang="ENG"
+                href="#"
+                data-lang-dk="ENGLISH"
+                data-lang-m="EN"
+                >ENGLISH</a
+              >
+              <a
+                class="selector__item selector__item--disabled text--label"
+                data-lang="DE"
+                data-lang-dk="DEUTSCHE"
+                data-lang-m="DE"
+                href="#"
+                >DEUTSCHE</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="navbar__second-level"
+          data-sly-repeat="${currentPage.listChildren}"
+        >
+          <div
+            data-sly-test.child="${item.name}"
+            class="second-level__items ${name}"
+            data-nav-2="${child}"
+          >
+            <div class="container">
+              <a
+                data-sly-test.child="${item.title}"
+                class="second-level__item--title text--paragraph-title"
+                href="/content/unicreditirenee/us/${item.name}.html"
+              >
+                ${child}
+              </a>
+              <sly data-sly-list.subpage="${item.listChildren}">
+                <a class="second-level__item text--body" href="#"
+                  >${subpage.title}</a
+                >
+              </sly>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hamburger">
+      <div class="icon"></div>
+    </div>
+  </nav>
+</header>

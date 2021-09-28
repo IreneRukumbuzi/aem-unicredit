@@ -1,0 +1,9 @@
+#base=js
+
+header.js
+footer.js
+common.js
+heroBanner__welcome.js
+swiper.min.js
+relatedHashtag.js
+photogallery.js

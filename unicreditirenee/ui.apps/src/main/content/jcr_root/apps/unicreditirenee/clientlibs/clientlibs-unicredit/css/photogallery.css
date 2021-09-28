@@ -1,0 +1,248 @@
+/****************************************************
+* Variables
+****************************************************/
+/* Extra bg colors
+============================= */
+/* Typography
+============================= */
+/****************************************************
+* Mixins
+****************************************************/
+/****************************************************
+* Photogallery
+****************************************************/
+.photogallery {
+  height: 862px;
+  background-color: #f5f5f5;
+}
+@media only screen and (max-width: 1024px) {
+  .photogallery {
+    height: 560px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 425px) and (max-width: 1024px) {
+  .photogallery {
+    height: 772px;
+  }
+}
+.photogallery .photogallery__modal {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  background: #262626;
+  position: relative;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.photogallery .photogallery__modal .icon-box {
+  width: 100%;
+  height: 10%;
+  font-size: 24px;
+  color: #ffffff;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+}
+.photogallery .photogallery__modal .arrow-box {
+  width: 100%;
+  height: 10%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: flex-end;
+}
+.photogallery .photogallery__modal .arrow-box .photogallery__arrows {
+  position: static;
+}
+.photogallery .photogallery__modal .picture {
+  background-image: url("https://www.unicreditgroup.eu/content/dam/unicreditgroup-eu/images/galleries/unicredit-tower/_PGM0291.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80%;
+}
+.photogallery .gallery__modal-paginator--mobile {
+  position: fixed;
+  bottom: 0px;
+  left: 0;
+  z-index: 120;
+  background: #262626;
+  margin: 0;
+  padding: 10px 0px;
+}
+.photogallery .gallery__modal-paginator--mobile .swiper-pagination-bullet {
+  border: 1px solid #ffffff;
+}
+.photogallery .gallery__modal--mobile {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  padding: 60px 0 70px 0;
+  box-sizing: border-box;
+  background: #262626;
+}
+.photogallery .gallery__modal--mobile .swiper-slide {
+  background-size: contain !important;
+}
+.photogallery .gallery__modal--mobile .photogallery__expand {
+  top: 20px !important;
+}
+.photogallery .gallery-top {
+  height: 600px;
+  width: 100%;
+  max-width: 1200px;
+  padding-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: content-box;
+}
+@media only screen and (max-width: 1024px) {
+  .photogallery .gallery-top {
+    height: 188px;
+    padding-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 425px) and (max-width: 1024px) {
+  .photogallery .gallery-top {
+    height: 400px;
+  }
+}
+.photogallery .gallery-top .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.photogallery .gallery-top .swiper-slide .swiper-text {
+  display: none;
+}
+.photogallery .gallery-top .photogallery__arrows {
+  bottom: 35px;
+  right: 3%;
+  outline: none;
+}
+@media only screen and (max-width: 1024px) {
+  .photogallery .gallery-top .photogallery__arrows {
+    display: none;
+  }
+}
+.photogallery .gallery-top .photogallery__pagination {
+  width: 100%;
+  display: none;
+  outline: none;
+}
+@media only screen and (max-width: 1024px) {
+  .photogallery .gallery-top .photogallery__pagination {
+    display: block;
+  }
+}
+.photogallery .gallery-top .photogallery__expand {
+  position: absolute;
+  top: 70px;
+  right: 3%;
+  cursor: pointer;
+  z-index: 10;
+}
+.photogallery .gallery-top .photogallery__expand .icon {
+  color: #ffffff;
+  font-size: 32px;
+}
+.photogallery .swiper-text--middle {
+  margin-top: 29px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+@media only screen and (max-width: 1024px) {
+  .photogallery .swiper-text--middle {
+    max-width: 100%;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+    margin-bottom: 20px;
+  }
+}
+.photogallery .swiper-text--middle .text-middle {
+  width: 100%;
+  min-height: 32px;
+  color: #262626;
+  text-align: center;
+}
+@media only screen and (max-width: 1024px) {
+  .photogallery .swiper-text--middle .text-middle {
+    min-height: 98px;
+  }
+}
+.photogallery .gallery-thumbs {
+  height: 83px;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1024px) {
+  .photogallery .gallery-thumbs {
+    height: 78px;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
+  }
+}
+.photogallery .gallery-thumbs .swiper-slide {
+  width: 167px !important;
+  height: 100%;
+  box-sizing: border-box;
+  opacity: 1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+@media only screen and (max-width: 1024px) {
+  .photogallery .gallery-thumbs .swiper-slide {
+    width: 156px !important;
+  }
+}
+.photogallery .gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 0.4;
+  border: 2px solid #00a2c1;
+}
+.photogallery .container--picture {
+  max-width: 994px;
+  margin-left: auto;
+  margin-right: auto;
+}

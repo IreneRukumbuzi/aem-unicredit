@@ -1,0 +1,12 @@
+<sly data-sly-use.footer="it.codeland.unicreditirenee.core.models.Header">
+  <div data-sly-test="${!footer.linkDetailsWithMap}">Add Footer Links</div>
+
+  <div
+    class="footer__socials"
+    data-sly-list.item="${footer.linkDetailsWithMap}"
+  >
+    <a href="${item.link}" target="_blank">
+      <span class="${item.icon}"></span>
+    </a>
+  </div>
+</sly>
